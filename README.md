@@ -1,26 +1,17 @@
-# Ember-query-params-reset
+# ember-query-params-reset
+[![Build Status](https://travis-ci.org/kellyselden/ember-query-params-reset.svg?branch=master)](https://travis-ci.org/kellyselden/ember-query-params-reset)
 
-This README outlines the details of collaborating on this Ember addon.
+Automatically reset all query params when leaving a route
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+`ember install ember-query-params-reset`
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+```js
+import Ember from 'ember';
+import QueryParamsResetRouteMixin from 'ember-query-params-reset/mixins/query-params-reset-route';
+export default Ember.Route.extend(QueryParamsResetRouteMixin, {
+  // the rest of your logic
+});
