@@ -11,5 +11,7 @@ export default Mixin.create({
         controller.set(prop, def);
       });
     }
+
+    this._super(...arguments);
   }
 });

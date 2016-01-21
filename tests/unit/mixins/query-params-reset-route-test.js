@@ -43,7 +43,7 @@ test('it resets params on exit', function(assert) {
   assert.equal(controller.get('myParam'), 'testDefaultValue');
 });
 
-test('it doesn\t reset non query param properties', function(assert) {
+test('it doesn\'t reset non query param properties', function(assert) {
   let isExiting = true;
 
   subject.resetController(controller, isExiting);
