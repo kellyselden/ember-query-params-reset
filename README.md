@@ -12,6 +12,8 @@ Automatically reset all query params when leaving a route
 ```js
 import Ember from 'ember';
 import QueryParamsResetRouteMixin from 'ember-query-params-reset/mixins/query-params-reset-route';
+
 export default Ember.Route.extend(QueryParamsResetRouteMixin, {
   // the rest of your logic
 });
+```
