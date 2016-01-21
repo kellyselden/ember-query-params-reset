@@ -1,7 +1,7 @@
 {
   "name": "ember-query-params-reset",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Automatically reset all query params when leaving a route",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/kellyselden/ember-query-params-reset.git",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Kelly Selden",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
