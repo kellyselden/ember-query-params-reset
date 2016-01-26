@@ -4,6 +4,10 @@
 
 Automatically reset all query params when leaving a route
 
+## Demo
+
+http://kellyselden.github.io/ember-query-params-reset
+
 ## Installation
 
 `ember install ember-query-params-reset`
