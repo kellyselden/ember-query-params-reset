@@ -13,7 +13,7 @@ test('visiting /route-without-query-params-reset', function(assert) {
   click('button');
 
   andThen(function() {
-    assert.equal(currentURL(), '/route-without-query-params-reset?aParam=test');
+    assert.equal(currentURL(), '/route-without-query-params-reset?aParam=true');
   });
 
   visit('/');
@@ -25,6 +25,6 @@ test('visiting /route-without-query-params-reset', function(assert) {
   click('#route-without-query-params-reset');
 
   andThen(function() {
-    assert.equal(currentURL(), '/route-without-query-params-reset?aParam=test');
+    assert.equal(currentURL(), '/route-without-query-params-reset?aParam=true');
   });
 });

@@ -13,7 +13,7 @@ test('visiting /route-with-query-params-reset', function(assert) {
   click('button');
 
   andThen(function() {
-    assert.equal(currentURL(), '/route-with-query-params-reset?aParam=test');
+    assert.equal(currentURL(), '/route-with-query-params-reset?aParam=true');
   });
 
   visit('/');
