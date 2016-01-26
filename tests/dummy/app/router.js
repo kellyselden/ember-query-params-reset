@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('route-without-query-params-reset');
+  this.route('route-with-query-params-reset');
 });
 
 export default Router;
