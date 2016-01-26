@@ -1,6 +1,6 @@
 {
   "name": "ember-query-params-reset",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Automatically reset all query params when leaving a route",
   "directories": {
     "doc": "doc",
