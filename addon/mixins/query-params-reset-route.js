@@ -1,13 +1,14 @@
 import Ember from 'ember';
 
 const {
-  Mixin
+  Mixin,
+  get, set
 } = Ember;
 
 export default Mixin.create({
   resetController(controller, isExiting) {
     if (isExiting) {
-      this.get('_qp.qps').forEach(qp => {
+      get(this, '_qp.qps').forEach(qp => {
         let defaultValue;
 
         if (qp.hasOwnProperty('def')) {
@@ -18,7 +19,7 @@ export default Mixin.create({
           defaultValue = qp.defaultValue;
         }
 
-        controller.set(qp.prop, defaultValue);
+        set(controller, qp.prop, defaultValue);
       });
     }
 
