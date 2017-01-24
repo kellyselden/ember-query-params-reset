@@ -25,3 +25,14 @@ export default Ember.Route.extend(QueryParamsResetRouteMixin, {
   // the rest of your logic
 });
 ```
+
+You can also use the util manually to reset query params at-will:
+
+```js
+import resetQueryParams from 'ember-query-params-reset/utils/reset-query-params';
+
+// ...
+
+resetQueryParams(myRoute); // reset all
+resetQueryParams(myRoute, ['myQueryParam']); // reset some
+```
