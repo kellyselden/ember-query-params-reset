@@ -1,4 +1,5 @@
 # ember-query-params-reset
+
 [![npm version](https://badge.fury.io/js/ember-query-params-reset.svg)](https://badge.fury.io/js/ember-query-params-reset)
 [![Build Status](https://travis-ci.org/kellyselden/ember-query-params-reset.svg?branch=master)](https://travis-ci.org/kellyselden/ember-query-params-reset)
 
