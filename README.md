@@ -32,6 +32,7 @@ import resetQueryParams from 'ember-query-params-reset/utils/reset-query-params'
 
 // ...
 
-resetQueryParams(myRoute); // reset all
 resetQueryParams(myRoute, ['myQueryParam']); // reset some
+let defaultValues = resetQueryParams(myRoute); // reset all
+console.log(defaultValues); // { myQueryParam: 'default value', /* etc... */ }
 ```

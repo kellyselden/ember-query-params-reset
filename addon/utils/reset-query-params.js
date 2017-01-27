@@ -21,6 +21,8 @@ function resetQueryParam(controller, qp) {
   }
 
   set(controller, qp.prop, defaultValue);
+
+  return defaultValue;
 }
 
 export default function(route, optionalArrayOfQueryParams) {
@@ -28,6 +30,8 @@ export default function(route, optionalArrayOfQueryParams) {
   let qps = getQueryParams(route);
 
   let queryParamsToReset = optionalArrayOfQueryParams;
+
+  let defaultValues = {};
 
   for (let i in qps) {
     if (!Object.hasOwnProperty.call(qps, i)) {
@@ -39,6 +43,10 @@ export default function(route, optionalArrayOfQueryParams) {
       continue;
     }
 
-    resetQueryParam(controller, qp);
+    let defaultValue = resetQueryParam(controller, qp);
+
+    defaultValues[qp.prop] = defaultValue;
   }
+
+  return defaultValues;
 }
