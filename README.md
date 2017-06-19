@@ -9,7 +9,7 @@ Automatically reset all query params when leaving a route
 
 ## Demo
 
-http://kellyselden.github.io/ember-query-params-reset
+https://kellyselden.github.io/ember-query-params-reset
 
 ## Installation
 
