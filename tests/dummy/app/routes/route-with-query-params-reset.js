@@ -1,8 +1,4 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 import QueryParamsResetRouteMixin from 'ember-query-params-reset/mixins/query-params-reset-route';
-
-const {
-  Route
-} = Ember;
 
 export default Route.extend(QueryParamsResetRouteMixin);

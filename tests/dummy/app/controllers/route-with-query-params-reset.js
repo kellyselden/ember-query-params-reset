@@ -1,9 +1,5 @@
-import Ember from 'ember';
-
-const {
-  Controller,
-  set
-} = Ember;
+import Controller from '@ember/controller';
+import { set } from '@ember/object';
 
 export default Controller.extend({
   queryParams: ['aParam'],
