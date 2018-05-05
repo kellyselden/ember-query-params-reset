@@ -3,7 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/kellyselden/ember-query-params-reset.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/ember-query-params-reset.svg)](https://badge.fury.io/js/ember-query-params-reset)
 [![Build Status](https://travis-ci.org/kellyselden/ember-query-params-reset.svg?branch=master)](https://travis-ci.org/kellyselden/ember-query-params-reset)
-![Ember Version](https://embadge.io/v1/badge.svg?start=1.13.0)
+[![Ember Version](https://img.shields.io/badge/ember-1.13%2B-brightgreen.svg)](https://www.emberjs.com/)
 
 Automatically reset all query params when leaving a route
 
