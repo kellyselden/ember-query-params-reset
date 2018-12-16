@@ -1,6 +1,6 @@
 {
   "name": "ember-query-params-reset",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Automatically reset all query params when leaving a route",
   "keywords": [
     "ember-addon"
