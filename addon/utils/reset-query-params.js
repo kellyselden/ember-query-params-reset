@@ -1,5 +1,4 @@
-import get from 'ember-metal/get';
-import set from 'ember-metal/set';
+import { get, set } from '@ember/object';
 
 function getQueryParams(route) {
   return get(route, '_qp.qps');
@@ -10,22 +9,12 @@ function shouldResetQueryParam(queryParamsToReset, qp) {
 }
 
 function resetQueryParam(controller, qp) {
-  let defaultValue;
+  set(controller, qp.prop, qp.defaultValue);
 
-  if (qp.hasOwnProperty('def')) {
-    // < v2.0
-    defaultValue = qp.def;
-  } else {
-    // >= v2.0
-    defaultValue = qp.defaultValue;
-  }
-
-  set(controller, qp.prop, defaultValue);
-
-  return defaultValue;
+  return qp.defaultValue;
 }
 
-export default function(route, optionalArrayOfQueryParams) {
+export default function resetQueryParams(route, optionalArrayOfQueryParams) {
   let controller = get(route, 'controller');
   let qps = getQueryParams(route);
 

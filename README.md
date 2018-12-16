@@ -1,21 +1,29 @@
-# ember-query-params-reset
+ember-query-params-reset
+==============================================================================
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/kellyselden/ember-query-params-reset.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/ember-query-params-reset.svg)](https://badge.fury.io/js/ember-query-params-reset)
 [![Build Status](https://travis-ci.org/kellyselden/ember-query-params-reset.svg?branch=master)](https://travis-ci.org/kellyselden/ember-query-params-reset)
-[![Ember Version](https://img.shields.io/badge/ember-1.13%2B-brightgreen.svg)](https://www.emberjs.com/)
+[![Ember Version](https://img.shields.io/badge/ember-2.16%2B-brightgreen.svg)](https://www.emberjs.com/)
 
 Automatically reset all query params when leaving a route
 
-## Demo
+Demo
+------------------------------------------------------------------------------
 
 https://kellyselden.github.io/ember-query-params-reset
 
-## Installation
 
-`ember install ember-query-params-reset`
+Installation
+------------------------------------------------------------------------------
 
-## Usage
+```
+ember install ember-query-params-reset
+```
+
+
+Usage
+------------------------------------------------------------------------------
 
 ```js
 import Ember from 'ember';
@@ -37,3 +45,9 @@ resetQueryParams(myRoute, ['myQueryParam']); // reset some
 let defaultValues = resetQueryParams(myRoute); // reset all
 console.log(defaultValues); // { myQueryParam: 'default value', /* etc... */ }
 ```
+
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).

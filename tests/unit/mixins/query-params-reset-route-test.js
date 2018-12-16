@@ -4,31 +4,29 @@ import createRoute from '../../helpers/create-route';
 let controller;
 let subject;
 
-module('Unit | Mixin | query params reset route', {
-  beforeEach() {
+module('Unit | Mixin | query params reset route', function(hooks) {
+  hooks.beforeEach(function() {
     subject = createRoute();
     controller = subject.get('controller');
-  }
-});
+  });
 
-test('it does nothing if not exiting', function(assert) {
-  let isExiting = false;
+  test('it does nothing if not exiting', function(assert) {
+    let isExiting = false;
 
-  subject.resetController(controller, isExiting);
+    subject.resetController(controller, isExiting);
 
-  assert.strictEqual(controller.get('myParam1'), 'test value 1');
-  assert.strictEqual(controller.get('myParam2'), 'test value 2');
-  assert.strictEqual(controller.get('myParam3'), 'test value 3');
-  assert.strictEqual(controller.get('nonQueryParam'), 'test value 4');
-});
+    assert.strictEqual(controller.get('myParam1'), 'test value 1');
+    assert.strictEqual(controller.get('myParam2'), 'test value 2');
+    assert.strictEqual(controller.get('nonQueryParam'), 'test value 3');
+  });
 
-test('it resets params on exit', function(assert) {
-  let isExiting = true;
+  test('it resets params on exit', function(assert) {
+    let isExiting = true;
 
-  subject.resetController(controller, isExiting);
+    subject.resetController(controller, isExiting);
 
-  assert.strictEqual(controller.get('myParam1'), 'test default value 1');
-  assert.strictEqual(controller.get('myParam2'), 'test default value 2');
-  assert.strictEqual(controller.get('myParam3'), undefined);
-  assert.strictEqual(controller.get('nonQueryParam'), 'test value 4');
+    assert.strictEqual(controller.get('myParam1'), 'test default value 1');
+    assert.strictEqual(controller.get('myParam2'), undefined);
+    assert.strictEqual(controller.get('nonQueryParam'), 'test value 3');
+  });
 });

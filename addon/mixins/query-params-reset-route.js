@@ -1,4 +1,4 @@
-import Mixin from 'ember-metal/mixin';
+import Mixin from '@ember/object/mixin';
 import resetQueryParams from '../utils/reset-query-params';
 
 export default Mixin.create({

@@ -1,30 +1,25 @@
-import { test } from 'qunit';
-import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
+import { click, currentURL, visit } from '@ember/test-helpers';
+import { module, test } from 'qunit';
+import { setupApplicationTest } from 'ember-qunit';
 
-moduleForAcceptance('Acceptance | route with query params reset');
+module('Acceptance | route with query params reset', function(hooks) {
+  setupApplicationTest(hooks);
 
-test('visiting /route-with-query-params-reset', function(assert) {
-  visit('/route-with-query-params-reset');
+  test('visiting /route-with-query-params-reset', async function(assert) {
+    await visit('/route-with-query-params-reset');
 
-  andThen(function() {
     assert.equal(currentURL(), '/route-with-query-params-reset');
-  });
 
-  click('button');
+    await click('button');
 
-  andThen(function() {
     assert.equal(currentURL(), '/route-with-query-params-reset?aParam=true');
-  });
 
-  visit('/');
+    await visit('/');
 
-  andThen(function() {
     assert.equal(currentURL(), '/');
-  });
 
-  click('#route-with-query-params-reset');
+    await click('#route-with-query-params-reset');
 
-  andThen(function() {
     assert.equal(currentURL(), '/route-with-query-params-reset');
   });
 });
